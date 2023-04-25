@@ -4,9 +4,89 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="Assets/Styles/style.css">
+    <script src="Assets/Scripts/script.js"></script>
+    <script src="https://kit.fontawesome.com/9141271592.js" crossorigin="anonymous"></script>
+    <title>DsvWilson</title>
 </head>
 <body>
-    Hi there!<br>Testing this.
+    <header>
+        <div class="logo">
+            <a href=""><img src="Assets/Images/c43dddc671d242168a7970128b38bd46.png" alt="website logo"></a>
+        </div>
+        
+        <nav>
+            <ul id="main-nav">
+                <li>About</li>
+                <li>Portfolio</li>
+                <li>Contact</li>
+            </ul>
+
+            <a href="javascript:void(0);" onclick="toggleMenu()" id="mobile-hamburger">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </a>
+        </nav>
+
+        <div class="hero-text">
+            <div id="hero-text-title">
+                <h1>LEGIBLE TEXT</h1>
+            </div>
+            <div id="hero-text-tagline">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+            <div id="hero-button">
+                <a href="#"><button>CLICK ME</button></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="below-header">
+            <h2>BELOW HEADER TITLE</h2>
+                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                <img src="" alt="" class="below-header-img">
+        </section>
+
+        <section class="testimonial">
+            <div class="testimonial-block" id="testimonial-one">
+                <img src="" alt="" class="testimonial-img">
+                <p class="name">Victor Wilson</p>
+                <p class="company-name">Nepgold</p>
+                <p class="testiomonial-text">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            </div>
+            <div class="testimonial-block" id="testimonial-two">
+                <img src="" alt="" class="testimonial-img">
+                <p class="name">Victor Wilson</p>
+                <p class="company-name">Nepgold</p>
+                <p class="testiomonial-text">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            </div>
+            <div class="testimonial-block" id="testiomonial-three">
+                <img src="" alt="" class="testimonial-img">
+                <p class="name">Victor Wilson</p>
+                <p class="company-name">Nepgold</p>
+                <p class="testiomonial-text">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            </div>
+        </section>
+
+        <section class="skills">
+            <h2>WHAT I CAN WORK WITH</h2>
+            <div class="skills-box" id="box-one">HTML</div>
+            <div class="skills-box" id="box-two">CSS</div>
+            <div class="skills-box" id="box-three">JAVASCRIPT</div>
+            <div class="skills-box" id="box-four">REACT</div>
+            <div class="skills-box" id="box-five">WORDPRESS</div>
+        </section>
+
+        <section class="contact-request-bar">
+            <div id="contact-request">
+                <p id="contact-request-text"></p>
+                <img src="" alt="" class="contact-request-img">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="copyright-text">(c) DSVWilson [year]</p>
+    </footer>
 </body>
 </html>
