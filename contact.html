@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assets/Styles/style.css">
+    <script src="Assets/Scripts/script.js"></script>
+    <script src="https://kit.fontawesome.com/9141271592.js" crossorigin="anonymous"></script>
+    <title>Contact DsvWilson</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href=""><img src="Assets/Images/c43dddc671d242168a7970128b38bd46.png" alt="website logo"></a>
+        </div>
+        
+        <nav>
+            <ul id="main-nav"></ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Portfolio</li>
+            </ul>
+
+            <a href="javascript:void(0);" onclick="toggleMenu()" id="mobile-hamburger">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </a>
+        </nav>
+
+        <div class="hero-text">
+            <div id="hero-text-title">
+                <h1>ABOUT DSVWILSON</h1>
+            </div>
+            <div id="hero-text-tagline">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="availability-block">
+            <div class="avalability">
+                <p id="availability-text">Please note that I am based in the GMT+1 timezone. As such, I can mostly only respond within waking hours.</p>
+                <p>The current time is:</p>
+            </div>
+        </section>
+
+        <section class="form-block">
+            <div class="form-area">
+                <form method="post" action="submit-form.php" target="thank-you.html">
+                    <div class="form-fields"> 
+                        <label for="first-name" class="labels">
+                            <div class="text-labels">First Name (required)</div> 
+                            <br> 
+                            <input name="first-name" id="first-name" type="text">
+                            <span class="validation-error-message" aria-live="polite"> </span>
+                        </label>
+                    </div>
+                
+                    <div class="form-fields">
+                        <label for="last-name" class="labels">
+                            <div class="text-labels">Last Name (required)</div> 
+                            <br> 
+                            <input name="last-name" id="last-name" type="text">
+                            <span class="validation-error-message" aria-live = "polite"> </span>
+                        </label> 
+                    </div>
+                
+                    <div class="form-fields">
+                        <label for="email" class="labels">
+                            <div class="text-labels">Email Address (required)</div> 
+                            <br> 
+                            <input name="email-address" id="email" type="email"/>
+                            <span class="validation-error-message" aria-live="polite"> </span>
+                        </label>
+                    </div>
+
+                    <div class="form-fields">
+                        <label for="message" class="labels">
+                            <div class="text-labels">How can I help you today?</div>
+                            <br>
+                            <textarea name="message" rows="5" cols="30" id="user-message"> </textarea>
+                            <span class="validation-error-message" aria-live="polite"> </span>
+                        </label>
+                    </div>
+
+                    <div class="submit-button">
+                        <button>Submit</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="copyright-text">(c) DSVWilson [year]</p>
+    </footer>
+</body>
+</html>
