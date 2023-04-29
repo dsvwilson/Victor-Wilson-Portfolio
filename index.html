@@ -10,36 +10,49 @@
     <title>DsvWilson</title>
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <div class="logo">
-            <a href=""><img src="Assets/Images/c43dddc671d242168a7970128b38bd46.png" alt="website logo"></a>
-        </div>
         
-        <nav>
-            <ul id="main-nav"></ul>
-                <li>About</li>
-                <li>Portfolio</li>
-                <li>Contact</li>
-            </ul>
+        <!-- Desktop Logo -->
+        <a href=""><img src="Assets/Images/dsvwilson-logo.png" alt="website logo" class="desktop-logo"></a>
+        
+        <!-- Hamburger icon (mobile navigation) -->
+        <label class="mobile-hamburger">
+            <input type="checkbox" />
+        </label>
+        <aside class="mobile-menu">
+            <nav>
+                <ul id="main-nav">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <div class="header-info">
+        <!-- Mobile Logo -->
+        <a href=""><img src="Assets/Images/dsvwilson-logo.png" alt="website logo" class="mobile-logo"></a>
+        
+        <!-- Menu -->
+        
 
-            <a href="javascript:void(0);" onclick="toggleMenu()" id="mobile-hamburger">
-                <i class="fa fa-bars" aria-hidden="true"></i>
-            </a>
-        </nav>
-
+        <!-- Hero Section -->
         <div class="hero-text">
             <div id="hero-text-title">
                 <h1>LEGIBLE TEXT</h1>
             </div>
             <div id="hero-text-tagline">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
             </div>
             <div id="hero-button">
-                <a href="#"><button>CLICK ME</button></a>
+                <a href="#" id="hero-button-link"><div class="hero-button">Click Me</div></a>
             </div>
+        </div>
         </div>
     </header>
 
+    <!-- Main Content -->
     <main>
         <section class="below-header-block">
             <h2>BELOW HEADER TITLE</h2>
@@ -84,9 +97,12 @@
             </div>
         </section>
     </main>
+    <!-- End of Main Content -->
 
+    <!-- Footer Section -->
     <footer>
         <p class="copyright-text">(c) DSVWilson [year]</p>
     </footer>
 </body>
 </html>
+<!-- End of Page -->
