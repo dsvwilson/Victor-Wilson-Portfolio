@@ -47,7 +47,7 @@ img {
 
 header {
     height: 100%;
-    background: no-repeat center/cover url(../Images/VIctor-Wilson.jpg);
+    background: no-repeat center/cover url(Assets/Images/VIctor-Wilson.jpg);
     box-shadow: inset 0 0 0 2000px rgba(29, 36, 138, 0.7);
     padding-bottom: 10%;
     color: whitesmoke;
