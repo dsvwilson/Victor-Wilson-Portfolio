@@ -1,0 +1,347 @@
+/* Mobile-first approach to design
+https://www.browserstack.com/guide/how-to-implement-mobile-first-design/
+*/
+
+/* Resetting browser's default settings */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Root styling */
+
+body {
+    background-color: #f0f3fc;
+}
+
+:root {
+    /* Variables for the mobile menu */
+    --bar-width: 60px;
+    --bar-height: 8px;
+    --hamburger-gap: 6px;
+    --foreground-color: #e6e5eb;
+    --background-color: #110f0f;
+    --hamburger-margin: 8px;
+    --animation-timing: 200ms ease-in-out;
+    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+
+    /* Other variables */
+    --link-color: #e6e7ea;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Hiding desktop logo on mobile */
+
+.desktop-logo {
+    display: none;
+}
+
+/* Header design */
+
+header {
+    height: 100%;
+    background: no-repeat center/cover url(../Images/VIctor-Wilson.jpg);
+    box-shadow: inset 0 0 0 2000px rgba(29, 36, 138, 0.7);
+    padding-bottom: 10%;
+    color: whitesmoke;
+}
+
+.header-info {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+/* Hero design */
+
+.hero-text {
+    text-align: center;
+    width: 75%;
+}
+
+#hero-text-title, #hero-text-tagline {
+    margin-bottom: 3%;
+}
+
+.hero-button {
+    max-width: 60%;
+    margin: 1.5rem auto;
+    padding: 1.25rem;
+    border: 2px;
+    border-radius: 20px 0 20px 0;
+    color: #fff;
+    background-color: rgb(11, 189, 192);
+}
+
+.hero-button:active {
+    padding: 1.3rem;
+    opacity: 1.8;
+}
+
+#hero-button-link {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+/* Mobile navigation */
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main-nav a {
+    color: var(--link-color);
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+#main-nav li {
+    display: block;
+    margin: 1.7rem;
+    text-transform: uppercase;
+    list-style-type: none;
+}
+
+#main-nav a:hover, a:active {
+    text-decoration: overline;
+    opacity: 0.8;    
+}
+
+.mobile-hamburger {
+    --x-width: calc(var(--hamburger-height) * 1.41421356237);
+    display: flex;
+    flex-direction: column;
+    gap: var(--hamburger-gap);
+    width: max-content;
+    position: absolute;
+    top: var(--hamburger-margin);
+    left: var(--hamburger-margin);
+    z-index: 2;
+    cursor: pointer;
+
+}
+
+.mobile-hamburger::before, 
+.mobile-hamburger::after,
+.mobile-hamburger input {
+    content: "";
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: var(--foreground-color);
+    transform-origin: left center;
+    transition: opacity var(--animation-timing), width var(--animation-timing), rotate var(--animation-timing), translate var(--animation-timing), background-color var(--animation-timing);
+}
+
+.mobile-hamburger input {
+    appearance: none;
+    outline: none;
+    pointer-events: none;
+}
+
+.mobile-hamburger:has(input:checked)::before {
+    rotate: 45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / -2);
+}
+
+.mobile-hamburger:has(input:checked)::after {
+    rotate: -45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / 2);
+}
+
+.mobile-hamburger input:checked {
+    opacity: 0;
+    width: 0;
+}
+
+.mobile-menu {
+    display: none;
+    transition: translate var(--animation-timing);
+    translate: -100%;
+    padding: 0.5rem 1rem;
+    padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+    max-width: 100%;
+    min-height: 25lvh;
+}
+
+.mobile-hamburger:has(input:checked) + .mobile-menu {
+    translate: 0;
+    display: block;
+    opacity: 0.8;
+}
+
+.mobile-hamburger:has(input:checked) + .mobile-logo {
+    display: none;
+}
+
+/* Main content styling */
+
+/* Laying out the below header block using CSS Grids */
+
+.below-header-block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 7%;
+    padding: 0 15%;
+    margin-top: 10%;
+}
+
+.below-header-block img {
+    border-radius: 15%;
+}
+
+.below-header-block-info h2 {
+    text-align: left;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.below-header-block-info p {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    max-width: 100%;
+    text-align: left;
+}
+
+/* Laying out the testimonials section using CSS Grids */
+
+.testimonial {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 1%;
+    padding: 5% 15%;
+    margin-top: 10%;
+}
+
+.testimonial img {
+    display: block;
+    margin: 0 auto;
+    max-width: 30%;
+    position: relative;
+    top : -8rem;
+    border-radius: 50%;
+}
+
+.testimonial-block {
+    background-color: #fff;
+    padding: 20% 10% 5% 10%;
+    height: 100%;
+}
+
+#testimonial-one {
+    background-color: bisque;
+}
+
+#testimonial-two {
+    background-color: beige;
+}
+
+#testimonial-three {
+    background-color: bisque;
+}
+
+.name {
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(15, 15, 130);
+    font-weight: bold;
+    margin-top: -6.5rem;
+}
+
+.company-name {
+    text-align: center;
+    text-transform: uppercase;
+    color: grey;
+    font-weight: bold;
+    opacity: .7;
+    margin: 1rem 0;
+}
+
+.testimonial-text {
+    text-align: center;
+}
+
+/* Styling the Skills section */
+
+.skills-block {
+    padding: 0 10%;
+    margin: 10% 0;
+}
+
+.skills-block h2 {
+    text-align: center;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 1%;
+    margin-top: 3%;
+}
+
+.skills-box {
+    background-color: #fff;
+    padding: 20% 15%;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+/* Styling the contact block section */
+
+.contact-request-block {
+    background-color: rgb(11, 189, 192);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 1%;
+    padding: 1.5% 5%;
+    margin: 0 auto;
+    width: 40%;
+    height: 50%;
+}
+
+.contact-request-text {
+    text-align: left;
+    color: #110f0f;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 0;
+}
+
+.profile-img {
+    display: block;
+    max-width: 40%;
+    border-radius: 50%;
+}
+
+footer {
+    background-color: #000;
+    margin-top: 5%;
+    padding: 2% 10%;
+}
+
+.copyright-text {
+    color: #fff;
+    text-align: center;
+}
